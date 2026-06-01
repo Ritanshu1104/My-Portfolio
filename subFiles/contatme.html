@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oleo+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+
+
+    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
+
+    <title>My Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-style: normal;
+
+        }
+
+        .maincontainer {
+            height: 100vh;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+
+        .navigationbar {
+            /* border: 1px solid green; */
+            background-color: rgba(0, 0, 0, 0.937);
+            color: white;
+            max-width: 20%;
+
+        }
+
+        .toggle-btn {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            position: relative;
+            top: 10px;
+            display: none;
+
+        }
+
+        .display {
+            height: 100vh;
+            overflow: visible;
+        }
+
+        .nav-profile img {
+            height: 170px;
+            width: 170px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 15px white;
+        }
+
+        .titlename {
+            font-family: "Oleo Script", system-ui;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .media_profiles {
+            /* border: 1px solid red; */
+            width: 100%;
+            align-items: center;
+        }
+
+        .media_bar {
+            padding: 0;
+            list-style: none;
+            /* border: 1px solid yellow; */
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 1rem;
+        }
+
+        .my_links {
+            border: 1px solid white;
+            height: 40px;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 50%;
+        }
+
+        .media_bar .media_line .my_links ion-icon {
+            font-size: 25px;
+            color: black;
+        }
+
+        #facebook:hover ion-icon {
+            color: blue;
+            transform: scale(1.2);
+        }
+
+        #instagram:hover ion-icon {
+            color: red;
+            transform: scale(1.2);
+        }
+
+        #github:hover ion-icon {
+            color: black;
+            transform: scale(1.2);
+        }
+
+        #linkedin:hover ion-icon {
+            color: blue;
+            transform: scale(1.2);
+        }
+
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+
+        }
+
+        .nav-menu a:hover {
+            color: aqua;
+            transform: scale(1.05);
+        }
+
+        #hire-me-btn {
+            border-radius: 17px;
+        }
+
+        #hire-me-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 0px 10px blue;
+        }
+
+        .text a {
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+        }
+
+        .maincontainer {
+            display: flex;
+            justify-content: center;
+            /* align-items: center; */
+        }
+
+        .maincontainer #homepage {
+            /* border: 1px solid yellow; */
+            width: 80%;
+
+        }
+
+
+        .quick-btn a button {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        #btn1 {
+            background-color: black;
+        }
+
+        .profile-photo-img img {
+            height: 300px;
+            width: 400px;
+            border-radius: 9px;
+        }
+
+        .profile-section {
+            background-color: rgba(0, 0, 0, 0.034);
+        }
+
+        .skill-title {
+            font-weight: 700;
+        }
+
+        .skill-content ul {
+            list-style: none;
+        }
+
+        .skill-icon img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .skill-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 17px;
+            box-shadow: 0 0 10px black;
+        }
+
+        .box-title p {
+            font-weight: 600;
+        }
+
+        .profile-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .contact-container {
+            text-align: center;
+        }
+
+        .socail-bar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            gap: 55px;
+        }
+
+
+
+        .socail-media a>ion-icon {
+            font-size: 2rem;
+            color: black;
+        }
+
+        .contact-form {
+            text-align: center;
+        }
+
+        .contact-container h2 {
+            font-weight: 700;
+        }
+
+
+        @media (max-width:1250px) {
+            .navigationbar {
+                max-width: 30%;
+            }
+        }
+
+        @media (max-width:1200px) {
+            .profile-section {
+                align-items: center;
+            }
+
+            .profile-photo-img img {
+                height: 200px;
+                width: 300px;
+                border-radius: 9px;
+            }
+
+            @media (max-width:1100px) {
+                .maincontainer {
+                    display: block;
+                }
+
+                .navigationbar {
+                    /* border: 1px solid green; */
+                    background-color: rgba(0, 0, 0, 0.937);
+                    color: white;
+                    max-width: 100%;
+                    height: 80px;
+                    overflow: hidden;
+                    padding-bottom: 20px;
+
+                }
+
+                .navigationbar.display {
+                    height: 150%;
+                    overflow: visible;
+                }
+
+
+                .maincontainer #homepage {
+                    /* border: 1px solid yellow; */
+                    width: 100%;
+
+                }
+
+                .profile-photo-img img {
+                    height: 250px;
+                    width: 350px;
+                    border-radius: 9px;
+                }
+
+                .titlename {
+                    margin-bottom: 15px;
+                }
+
+                .toggle-btn {
+                    display: block;
+                }
+
+            }
+
+            @media (max-width:750px) {
+                .box {
+                    margin-bottom: 25px;
+                }
+
+                .profile-section {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-wrap: wrap-reverse;
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="maincontainer">
+        <section id="navbar" class="p-2 navigationbar">
+            <div class="toggle-btn" id="toggal">
+                <ion-icon name="menu"></ion-icon>
+            </div>
+            <div class="d-flex align-self-center justify-content-center">
+
+                <h3 class="titlename mb-3">
+                    Ritanshu Mahajan
+                </h3>
+            </div>
+            <div class="nav-profile d-flex justify-content-center">
+                <img src="../assets/Index_Page/Passport Photo 1.jpg" alt="">
+            </div>
+            <div class="introbox mt-3 d-flex justify-content-center">
+                <p>
+                    "Hi, I'm Ritanshu Mahajan, a MCA passionate about leveraging technology to build
+                    innovative solutions."
+                </p>
+            </div>
+            <div class="media_profiles">
+                <ul class="media_bar ">
+                    <!-- <li class="media_line"><a href="" class="my_links" id="facebook"><ion-icon
+                                name="logo-facebook"></ion-icon></a></li> -->
+                    <li class="media_line"><a href="" class="my_links" id="github"><ion-icon
+                                name="logo-github"></ion-icon></a></li>
+                    <li class="media_line"><a href="" class="my_links" id="instagram"><ion-icon
+                                name="logo-instagram"></ion-icon></a></li>
+                    <li class="media_line"><a href="" class="my_links" id="linkedin"><ion-icon
+                                name="logo-linkedin"></ion-icon></a></li>
+                </ul>
+            </div>
+            <div class="nav-bar mt-4 d-flex justify-content-center">
+                <div class="nav-list">
+                    <ul class="nav-title">
+                        <li class="nav-menu"><a href="../index.html" id="nav-ttile1" class=" d-flex justify-content-start">
+                                <div class="nav-icon"><ion-icon name="home"></ion-icon> </div>
+                                <p class="nav_item ms-2">Home</p>
+                            </a></li>
+                        <li class="nav-menu"><a href="../subFiles/portfolio.html" id="nav-ttile2"
+                                class=" d-flex justify-content-start">
+                                <div class="nav-icon"><ion-icon name="terminal"></ion-icon></div>
+                                <p class="nav_item ms-2">PortFolio</p>
+                            </a></li>
+                        <li class="nav-menu"><a href="../subFiles/resume.html" id="nav-ttile3"
+                                class=" d-flex justify-content-start">
+                                <div class="nav-icon"><ion-icon name="document"></ion-icon></div>
+                                <p class="nav_item ms-2">Resume</p>
+                            </a></li>
+                        <li class="nav-menu"><a href="../subFiles/contatme.html" id="nav-ttile4"
+                                class=" d-flex justify-content-start  ">
+                                <div class="nav-icon"><ion-icon name="call"></ion-icon></div>
+                                <p class="nav_item ms-2">Contact Me</p>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hire-me mt-1 d-flex justify-content-center ">
+                <button type="button" class="btn btn-primary btn-lg d-flex justify-content-evenly align-items-center"
+                    id="hire-me-btn">
+                    <div class="icon"><ion-icon name="paper-plane"></ion-icon></div>
+                    <div class="text ms-2"><a href="./subFiles/hireme.html">Hire me</a></div>
+                </button>
+            </div>
+        </section>
+        <section id="homepage">
+            <div class="profile-section p-3">
+                <div class="contact-us">
+                    <div class="contact-container">
+                        <h2>Contact</h2>
+                        <div class="contact-content">
+                            <p>Thank you for taking the time to explore my portfolio! I'm excited to hear about
+                                potential projects, collaborations, or opportunities. If you have any questions or would
+                                like to discuss how I can help bring your vision to life, please don't hesitate to reach
+                                out.
+                            </p>
+
+                            <div class="socail-site">
+                                <p>Want to get connected? Follow me on the social channels below.</p>
+                                <div class="socail-link d-flex justify-content-center">
+                                    <ul class=" socail-bar">
+                                        <!-- <li class="socail-media"><a href="" id="facebook"><ion-icon
+                                                    name="logo-facebook"></ion-icon></a></li> -->
+                                        <li class="socail-media"><a href="es: https://github.com/Ritanshu1104" id="github"><ion-icon
+                                                    name="logo-github"></ion-icon></a></li>
+                                        <li class="socail-media"><a href="" id="instagram"><ion-icon
+                                                    name="logo-instagram"></ion-icon></a></li>
+                                        <li class="socail-media"><a href="LinkedIn: https://www.linkedin.com/in/ritanshu-mahajan-6416b726a " id="linkedin"><ion-icon
+                                                    name="logo-linkedin"></ion-icon></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <p>
+                                Drop me an email at <b><i><a href="">ritanshupm@gmail.com</a></i></b> or fill
+                                out the
+                                contact form below
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="skills-section mb-3">
+                <div class="contact-form">
+                    <div class="form-container">
+                        <h3>Get in Touch</h3>
+                        <div class="form p-4">
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="First name"
+                                            aria-label="First name">
+                                    </div>
+                                    <div class="col">
+                                        <input type="text" class="form-control" placeholder="Last name"
+                                            aria-label="Last name">
+                                    </div>
+                                </div>
+                                <div class="mb-3 mt-3">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                                        placeholder="name@example.com">
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                        placeholder="Enter your Message"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script>
+        const togglebtn = document.getElementById('toggal');
+        const targetelement = document.getElementById('navbar');
+
+        togglebtn.addEventListener('click', () => {
+            targetelement.classList.toggle('display');
+        });
+    </script>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
