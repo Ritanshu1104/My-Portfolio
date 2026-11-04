@@ -4,7 +4,7 @@ A modern, high-performance personal portfolio tailored for **Software Developmen
 
 Built with clean semantic HTML5, modern Tailwind CSS, Lucide / FontAwesome icons, Canvas interactive particle physics, and pure JavaScript.
 
-Visit My Portfolio: https://ritanshu-portfolio-nine.vercel.app/
+My Portfolio Link: https://ritanshu-portfolio-nine.vercel.app/
 
 ---
 
