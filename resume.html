@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ritanshu Mahajan - Resume | SDE — AI/ML</title>
+  <meta name="description" content="Resume of Ritanshu Mahajan - Software Development Engineer (SDE) & AI/ML">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0f172a;
+      color: #1e293b;
+      line-height: 1.45;
+      font-size: 13.5px;
+      padding: 24px 16px;
+    }
+
+    /* Print & Action Bar */
+    .action-bar {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+    }
+    .action-bar a, .action-bar button {
+      color: #f8fafc;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: #334155;
+      transition: all 0.2s;
+    }
+    .action-bar button.primary {
+      background: #10b981;
+      border-color: #10b981;
+      color: #022c22;
+      font-weight: 700;
+    }
+    .action-bar a:hover, .action-bar button:hover {
+      opacity: 0.9;
+    }
+
+    /* Resume Document Container */
+    .resume-page {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 36px 42px;
+      border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      color: #0f172a;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .header .subtitle {
+      font-size: 14px;
+      font-weight: 600;
+      color: #334155;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .header .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px;
+      font-size: 12px;
+      color: #475569;
+    }
+    .header .contact-links a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    /* Section Styling */
+    .section {
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* Education Table */
+    .edu-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    .edu-table th, .edu-table td {
+      border: 1px solid #cbd5e1;
+      padding: 5px 8px;
+      text-align: left;
+    }
+    .edu-table th {
+      background: #f1f5f9;
+      font-weight: 700;
+      color: #1e293b;
+    }
+    .edu-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    /* Skills List */
+    .skill-category {
+      margin-bottom: 5px;
+      font-size: 12.5px;
+    }
+    .skill-category strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* Projects & Experience */
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      margin-bottom: 3px;
+    }
+    .item-title {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-tech {
+      font-weight: 500;
+      font-style: italic;
+      color: #475569;
+    }
+    .item-link {
+      font-size: 11px;
+      color: #0284c7;
+      text-decoration: none;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .item-date {
+      font-size: 11.5px;
+      color: #64748b;
+      font-weight: 600;
+    }
+    .bullet-list {
+      list-style-type: disc;
+      margin-left: 20px;
+      font-size: 12.5px;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+    .bullet-list li {
+      margin-bottom: 3px;
+    }
+
+    /* Certifications */
+    .cert-list {
+      list-style-type: disc;
+      margin-left: 20px;
+      font-size: 12.5px;
+      color: #334155;
+    }
+    .cert-list li {
+      margin-bottom: 3px;
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .action-bar {
+        display: none !important;
+      }
+      .resume-page {
+        box-shadow: none;
+        padding: 0;
+        max-width: 100%;
+        margin: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #0f172a;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Action Bar -->
+  <div class="action-bar">
+    <a href="index.html">
+      <i class="fa-solid fa-arrow-left"></i> Back to Portfolio
+    </a>
+    <div style="display: flex; gap: 10px;">
+      <button onclick="window.print()" class="primary">
+        <i class="fa-solid fa-print"></i> Print / Save as PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- ATS Optimized Resume Document -->
+  <div class="resume-page">
+
+    <!-- Header -->
+    <header class="header">
+      <h1>Ritanshu Mahajan</h1>
+      <div class="subtitle">Software Development Engineer (SDE) — AI/ML</div>
+      <div class="contact-links">
+        <span><i class="fa-solid fa-phone"></i> +91-9579036245</span>
+        <span><i class="fa-solid fa-envelope"></i> ritanshupm@gmail.com</span>
+        <span><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/ritanshu-mahajan" target="_blank">linkedin.com/in/ritanshu-mahajan</a></span>
+        <span><i class="fa-brands fa-github"></i> <a href="https://github.com/Ritanshu1104" target="_blank">github.com/Ritanshu1104</a></span>
+      </div>
+    </header>
+
+    <!-- Education Section -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <table class="edu-table">
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Institute Name</th>
+            <th>University Name</th>
+            <th>Year of Passing</th>
+            <th>Score Details (%/CGPA)</th>
+            <th>Course Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>MCA</strong></td>
+            <td>Vellore Institute of Technology</td>
+            <td>VIT University</td>
+            <td>2027</td>
+            <td><strong>8.54 CGPA</strong></td>
+            <td>Full Time</td>
+          </tr>
+          <tr>
+            <td><strong>BBA (CA)</strong></td>
+            <td>MES Garware College</td>
+            <td>Pune University</td>
+            <td>2025</td>
+            <td><strong>8.8 CGPA</strong></td>
+            <td>Full Time</td>
+          </tr>
+          <tr>
+            <td><strong>12th (HSC)</strong></td>
+            <td>Sir Parashurambhau College</td>
+            <td>HSC Board</td>
+            <td>2022</td>
+            <td>70%</td>
+            <td>Full Time</td>
+          </tr>
+          <tr>
+            <td><strong>10th (SSC)</strong></td>
+            <td>Greenwoods School</td>
+            <td>SSC Board</td>
+            <td>2020</td>
+            <td>84.40%</td>
+            <td>Full Time</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Strong Subjects / Skills -->
+    <section class="section">
+      <h2 class="section-title">Strong Subjects &amp; Technical Skills</h2>
+      <div class="skill-category">
+        <strong>Languages &amp; Querying:</strong> Python, Java, SQL, C, JavaScript, HTML5, CSS3, R.
+      </div>
+      <div class="skill-category">
+        <strong>Frameworks &amp; Libraries:</strong> Django, Flask, Node.js, Express, React, PyTorch, TensorFlow, OpenCV, NumPy, Pandas.
+      </div>
+      <div class="skill-category">
+        <strong>Backend &amp; Databases:</strong> MySQL, MongoDB, PostgreSQL, Supabase.
+      </div>
+      <div class="skill-category">
+        <strong>CS Fundamentals:</strong> Data Structures &amp; Algorithms, OOPS, Operating Systems, Networking, DBMS, Cloud Computing Fundamentals.
+      </div>
+    </section>
+
+    <!-- Projects Undertaken -->
+    <section class="section">
+      <h2 class="section-title">Projects Undertaken</h2>
+      
+      <!-- Gurukul -->
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Gurukul - The E-learning Platform</span> | 
+            <span class="item-tech">Python, Django, HTML, CSS, JavaScript, Bootstrap</span>
+          </div>
+          <a class="item-link" href="https://shorturl.at/oIyFu" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> shorturl.at/oIyFu</a>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed an interactive e-learning website to deliver quality educational content and personalized learning paths.</li>
+          <li>Integrated interactive tools and multimedia resources, empowering users of diverse demographics to develop skills at their own pace.</li>
+          <li>Built a responsive frontend using Bootstrap and JavaScript, connected to a robust Django backend for content management.</li>
+        </ul>
+      </div>
+
+      <!-- Intelligent Sign Language -->
+      <div class="project-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Intelligent Sign Language Recognition System</span> | 
+            <span class="item-tech">Python, OpenCV, TensorFlow, Flask</span>
+          </div>
+          <a class="item-link" href="https://shorturl.at/N1cH3" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i> shorturl.at/N1cH3</a>
+        </div>
+        <ul class="bullet-list">
+          <li>Built a real-time ISL recognition pipeline to address communication gaps, classifying hand gestures into text and speech.</li>
+          <li>Trained a CNN on a labeled gesture dataset with data augmentation and dropout regularization to improve accuracy.</li>
+          <li>Profiled and optimized the inference pipeline for low-latency classification by applying batch normalization and model quantization.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Hackathon Experience -->
+    <section class="section">
+      <h2 class="section-title">Hackathon Experience</h2>
+      
+      <div class="hackathon-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Ignition Hackathon 2026</span> &bull; <em>Participant</em>
+          </div>
+          <div class="item-date">Aug 2026 | Texas, USA</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed an idea called <strong>“EdgeEdu,”</strong> an offline adaptive learning platform designed for low-connectivity areas.</li>
+        </ul>
+      </div>
+
+      <div class="hackathon-item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">HealthHack 2026, VITB-JHU</span> &bull; <em>Participant</em>
+          </div>
+          <div class="item-date">Jan 2026 | Bhopal, India</div>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed an idea called <strong>“GeneGuard,”</strong> predictive analytics empowering preventive care in maternal and child health through intelligent software solutions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section class="section">
+      <h2 class="section-title">Certifications</h2>
+      <ul class="cert-list">
+        <li><strong>Kaggle:</strong> Python Certification.</li>
+        <li><strong>Great Learning:</strong> Front End Development (HTML5, CSS3).</li>
+        <li><strong>ServiceNow University:</strong> ServiceNow Administration Fundamentals.</li>
+        <li><strong>Imarticus Learning:</strong> Data Analytics and Visualization with Power BI.</li>
+      </ul>
+    </section>
+
+  </div>
+
+</body>
+</html>
